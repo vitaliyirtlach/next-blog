@@ -1,7 +1,10 @@
 import React from "react"
+import HeaderLayout from "../components/HeaderLayout/HeaderLayout"
 
-export default function Home() {
+export default function Home(props: any) {
   return (
-      <div>Next-blog</div>
+      <HeaderLayout title="✋Home">
+        Home
+      </HeaderLayout>
   )
 }
