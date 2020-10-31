@@ -30,7 +30,7 @@ export default function HeaderLayout({children, title}: any) {
                 </Link>
             </div>
         </header>
-        <div className="container">
+        <div className="content">
             {children}
         </div>
     </>

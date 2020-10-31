@@ -70,7 +70,7 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx", "models/Post.model.js"
   ],
   "exclude": [
     "node_modules"

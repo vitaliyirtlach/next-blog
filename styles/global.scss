@@ -12,11 +12,14 @@ body {
 header {
     width: 100%;
     padding: 10px;
+    height: 60px;
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     span {
         font-size: 20px;
+        cursor: pointer;
     }
     border-bottom: 1px solid silver;
 }
@@ -26,4 +29,10 @@ header {
     height: 30px;
     margin-left: 10px;
     cursor: pointer;
+}
+
+.content {
+    min-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }

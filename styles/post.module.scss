@@ -1,0 +1,28 @@
+.post {
+    width: 90%;
+    text-align: center;
+    box-shadow: 1px 1px 10px silver;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    padding-top: 25px;
+    height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+}
+
+.body {
+    white-space: normal;
+    word-break: normal;
+    text-align: start;
+    font-family: 'Roboto', sans-serif;
+}
