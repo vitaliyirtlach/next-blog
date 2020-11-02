@@ -12,19 +12,27 @@
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
+  "resolutions": {
+    "styled-components": "^5"
+  },
   "devDependencies": {
     "@types/node": "^14.14.6",
     "@types/react": "^16.9.55",
+    "@types/styled-components": "^5.1.4",
     "axios": "^0.21.0",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "concurrently": "^5.3.0",
     "cors": "^2.8.5",
     "cross-env": "^7.0.2",
     "express": "^4.17.1",
+    "formik": "^2.2.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.11",
     "nextjs-progressbar": "0.0.7",
     "nodemon": "^2.0.6",
     "sass": "^1.27.1",
+    "styled-components": "^5.2.1",
     "typescript": "^4.0.5"
   }
 }

@@ -17,11 +17,20 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid silver;
     span {
         font-size: 20px;
         cursor: pointer;
     }
-    border-bottom: 1px solid silver;
+    a {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 18px;
+        color: black;
+        &:hover {
+            color: gray;
+        }
+    }
 }
 
 .social-media-icon {

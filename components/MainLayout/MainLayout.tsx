@@ -10,24 +10,11 @@ export default function HeaderLayout({children, title}: any) {
         </Head>
         <header>
             <Link href="/" as="/">
-                <span>{">"} vitaliyirtlach</span>
+                <span>next-blog</span>
             </Link>
             <div>
-                <Link href="https://github.com/vitaliyirtlach">
-                    <img className="social-media-icon" src="/icons/github.png" />
-                </Link>
-                
-                <Link href="https://www.instagram.com/w13vitaliy/">
-                    <img className="social-media-icon" src="/icons/instagram.png" />
-                </Link>
-
-                <Link href="https://twitter.com/w13vitaliy">
-                    <img className="social-media-icon" src="/icons/twitter.png" />
-                </Link>
-
-                <Link href="https://www.facebook.com/vitaliyirtlach/">
-                    <img className="social-media-icon" src="/icons/facebook.png" />
-                </Link>
+                <Link href="/signup">Sign Up</Link>
+                <Link href="/login">Login</Link>
             </div>
         </header>
         <div className="content">
