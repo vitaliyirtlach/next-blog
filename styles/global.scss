@@ -22,13 +22,19 @@ header {
         font-size: 20px;
         cursor: pointer;
     }
-    a {
-        margin-left: 10px;
-        margin-right: 10px;
-        font-size: 18px;
-        color: black;
-        &:hover {
-            color: gray;
+
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+        * {
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 18px;
+            color: black;
+            cursor: pointer;
+            &:hover {
+                color: gray;
+            }
         }
     }
 }

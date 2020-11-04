@@ -5,6 +5,7 @@ const PostsRouter = require("./routes/PostsRouter")
 const mongoose = require("mongoose")
 const cors  = require("cors")
 const AuthRouter = require("./routes/AuthRouter")
+const UserRouter = require("./routes/UserRouter")
 
 const PORT = 5000 || process.env.PORT 
 const dev = process.env.NODE_ENV !== "production"
@@ -21,7 +22,7 @@ app.prepare().then(() => {
 
     server.use("/posts", PostsRouter)
     server.use("/auth", AuthRouter)
-
+    server.use("/user", UserRouter)
     mongoose.connect("mongodb+srv://vitaliyirtlach:Vitaliy13@cluster0.uu6jx.mongodb.net/posts?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useFindAndModify: true,

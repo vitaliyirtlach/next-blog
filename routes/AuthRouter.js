@@ -17,11 +17,22 @@ AuthRouter.post("/signup", async (req, res) => {
     await user.save()
     const token = jwt.sign({ userID: user.id }, "next-blog", { expiresIn: "14 days" })
     res.json({ user, token })
-
 })
+
 
 AuthRouter.post("/login", async (req, res) => {
-
+    const { email, password } = req.body
+    const user = await User.findOne({ email })
+    if (!user) res.status(400).json({error: "User is not found!"}) 
+    const validPassword = await bcrypt.compare(password, user.password)
+    if (validPassword) {
+        const token = jwt.sign({ userID: user._id }, "next-blog", {expiresIn: "14 days"})
+        res.json({user, token})
+    } else {
+        res.json({error: "Wrong password!"})
+    }
 })
+
+
 
 module.exports = AuthRouter

@@ -8,15 +8,21 @@ PostsRouter.get("/all", async (req, res) => {
     res.json(posts)
 })
 
-PostsRouter.get("/:id", async (req, res) => {
+PostsRouter.get("/post/:id", async (req, res) => {
     const post = await Post.findOne({ _id: req.params.id })
     res.json(post)
 })
 
+PostsRouter.get("/:userID", async (req, res) => {
+    const posts = await Post.find({ author: req.params.userID })
+    res.json(posts)
+})
+
+
 
 PostsRouter.post("/add", async (req, res) => {
-    const {body, title} = req.body
-    const post = new Post({ title, body })
+    const {body, title, author} = req.body
+    const post = new Post({ title, body, author })
     await post.save()
     res.json({message: "Post was added"})
 })

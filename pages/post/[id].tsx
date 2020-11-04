@@ -15,7 +15,7 @@ const PostId: React.FC<Post> = ({_id, title, body}) => {
 }
 
 export const  getStaticProps: GetStaticProps = async (ctx: any) => {
-    const res = await xhr.get(`/posts/${ctx.params.id}`)
+    const res = await xhr.get(`/posts/post/${ctx.params.id}`)
     return {
         props: {
             _id: res.data._id,

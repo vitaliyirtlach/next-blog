@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useContext } from "react"
 import { xhr } from "../axios/xhr"
 import { useFormik } from "formik"
 import MainLayout from "../components/MainLayout/MainLayout"
 import { useRouter } from "next/dist/client/router"
+import { UserContext } from "../contexts/user.context"
 
 const AddPost: React.FC<any> = (props) => {
     const router = useRouter()
+    const user = useContext(UserContext)
     const formik = useFormik({
         initialValues: {
             title: "",
@@ -13,9 +15,10 @@ const AddPost: React.FC<any> = (props) => {
         },
         onSubmit: async (values) => {
             try {
-                const res = await xhr.post("/posts/add", {
+                await xhr.post("/posts/add", {
                     title: values.title,
-                    body: values.body
+                    body: values.body,
+                    author: user.userID
                 })
                 router.push("/")
             } catch(e) { console.log(e) }
