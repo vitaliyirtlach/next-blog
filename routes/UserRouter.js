@@ -26,4 +26,5 @@ UserRouter.get("/all", async (req, res) => {
 })
 
 
+
 module.exports = UserRouter

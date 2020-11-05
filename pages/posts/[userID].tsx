@@ -14,7 +14,7 @@ const UserPosts: React.FC<IUserPosts> = ({posts}) => {
     const router = useRouter()
     return (
         <MainLayout title={`/posts/${router.query.userID}`}>
-            <Posts posts={posts} />
+            <Posts  posts={posts} />
         </MainLayout>
     )
 }
@@ -30,7 +30,7 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
     const {data} = await xhr.get(`/posts/${params?.userID}`)
     return {
         props: {
-            posts: data
+            posts: data,
         }
     }
 }

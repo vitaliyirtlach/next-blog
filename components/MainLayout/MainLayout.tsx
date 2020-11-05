@@ -13,6 +13,7 @@ export default function MainLayout({children, title}: any) {
     const user = useContext(UserContext)
     return <>
         <Head>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
             <title>{title}</title>
         </Head>

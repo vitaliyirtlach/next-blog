@@ -7,7 +7,9 @@ import Posts from "../components/Posts/Posts"
 const Home = (props: any) => {
     return (
     <MainLayout title="/">
-        <Link href="/add">Add post</Link>
+        <Link href="/add">
+            <div className="add-post">Add post</div>
+        </Link>
         <Posts posts={props.posts} />
     </MainLayout>)
 }
